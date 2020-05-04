@@ -22,6 +22,16 @@ Describe "Module Organisation Tests" {
         $null = [System.Management.Automation.PSParser]::Tokenize($psFile, [ref]$errors)
         $errors.Count | Should Be 0
     }
+
+}
+
+Describe "Module Localization Tests" {
+    $localizationArr = ("DE-DE","EN-US")
+    foreach ($localization in $localizationArr) {
+        It "Has $localization Category localization" {
+            "$PSScriptRoot\..\$localization\Category.psd1" | Should exist
+        }
+    }
 }
 
 Describe  "Module Function Tests" {
