@@ -3,7 +3,7 @@
     .DESCRIPTION
     .EXAMPLE
 #>
-function New-CMADR {
+function New-CMOSADR {
     [CmdletBinding(SupportsShouldProcess=$true)]
     param (
         # Specify ConfigMgr Site Code

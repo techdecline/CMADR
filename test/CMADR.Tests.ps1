@@ -39,7 +39,7 @@ Describe  "Module Function Tests" {
         "$PSScriptRoot\..\function-*.ps1" | should exist
     }
 
-    $functionArr = ("New-CMADR")
+    $functionArr = ("New-CMOSADR")
 
     foreach ($functionStr in $functionArr ) {
         Context "Test function $functionStr" {
