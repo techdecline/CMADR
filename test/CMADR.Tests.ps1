@@ -29,7 +29,7 @@ Describe "Module Localization Tests" {
     $localizationArr = ("DE-DE","EN-US")
     foreach ($localization in $localizationArr) {
         It "Has $localization Category localization" {
-            "$PSScriptRoot\..\$localization\Category.psd1" | Should exist
+            "$PSScriptRoot\..\$localization\Classification.psd1" | Should exist
         }
     }
 }
