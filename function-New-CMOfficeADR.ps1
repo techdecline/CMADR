@@ -4,6 +4,9 @@
     .DESCRIPTION
     Creates an Automatic Deployment Rule including Deployment Package and Deployment for Microsoft Office.
     .EXAMPLE
+    PS> New-CMOfficeADR -CMSiteCode dec: -CMSiteServerFQDN cm001.techdecline.com -OfficeVersion Office2019 -Architecture x86 -CollectionId DEC0007A -EnableDeployment -Location \\cm001\SUP\ -WsusLocalization en-us
+
+    Will Create an Automatic Deployment Rule for Office 2019 (x86) with an active Deployment
 #>
 function New-CMOfficeADR {
     [CmdletBinding(SupportsShouldProcess=$true)]
