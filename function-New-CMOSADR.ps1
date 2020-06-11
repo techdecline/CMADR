@@ -4,6 +4,14 @@
     .DESCRIPTION
     Creates an Automatic Deployment Rule including Deployment Package and Deployment for any supported Microsoft Operating System.
     .EXAMPLE
+    PS> New-CMOSADR -CMSiteCode dec: -CMSiteServerFQDN cm001.techdecline.com -Architecture x64 -CollectionId DEC0007A -EnableDeployment -Location \\cm001\SUP\ -OSVersion 2004
+
+    Will create an Automatic Deployment Rule for Windows 10 2004 (x64) with the selected Parameters and a disabled Deployment for the Collection with ID DEC0007A
+
+    .EXAMPLE
+    New-CMOSADR -CMSiteCode dec: -CMSiteServerFQDN cm001.techdecline.com -OSName WS2019 -Architecture x64 -CollectionId DEC0007A -EnableDeployment -Location \\cm001\SUP\ -WsusLocalization de-de -EnableDeployment
+
+    Will create an Automatic Deployment Rule for Windows Server 2019 and German WSUS localization (used for Software Update Filtering within the ADR). A Deployment will be created in an activated State.
 #>
 function New-CMOSADR {
     [CmdletBinding(SupportsShouldProcess=$true)]
