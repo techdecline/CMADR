@@ -21,13 +21,13 @@ ModuleVersion = '0.0.1'
 GUID = 'e351b0f0-f062-4d9e-abef-db5f05ed86c8'
 
 # Author of this module
-Author = 'corne'
+Author = 'Cornelius Schuchardt'
 
 # Company or vendor of this module
-CompanyName = 'Unknown'
+CompanyName = 'Bright Skies GmbH'
 
 # Copyright statement for this module
-Copyright = '(c) corne. All rights reserved.'
+Copyright = '(c) Cornelius Schuchardt. All rights reserved.'
 
 # Description of the functionality provided by this module
 # Description = ''
@@ -69,7 +69,7 @@ Copyright = '(c) corne. All rights reserved.'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = 'New-CMOSADR'
+FunctionsToExport = 'New-CMOSADR','New-CMOfficeADR'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
 CmdletsToExport = '*'
