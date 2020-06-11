@@ -5,7 +5,7 @@
     Creates an Automatic Deployment Rule including Deployment Package and Deployment for Microsoft Office.
     .EXAMPLE
 #>
-function New-CMOffficeADR {
+function New-CMOfficeADR {
     [CmdletBinding(SupportsShouldProcess=$true)]
     param (
         # Specify ConfigMgr Site Code
@@ -22,7 +22,7 @@ function New-CMOffficeADR {
         # Office Version
         [Parameter(Mandatory)]
         [ValidateSet("Office2019")]
-        [int]
+        [string]
         $OfficeVersion,
 
         # Architecture
@@ -100,7 +100,7 @@ function New-CMOffficeADR {
 
         # set title
         switch ($OfficeVersion) {
-            "Office 2019" {
+            "Office2019" {
                 Write-Verbose "Setting Title filter to: Office 2019"
                 $adrParam.Add("Title","Office 2019%") }
             default {
