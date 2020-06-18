@@ -35,7 +35,7 @@ function New-CMOSADR {
 
         # OS Short Name
         [Parameter(Mandatory,ParameterSetName="ByOSName")]
-        [ValidateSet("WS2012R2","WS2016","WS2019")]
+        [ValidateSet("WS2012","WS2012R2","WS2016","WS2019")]
         [String]
         $OSName,
 
@@ -136,6 +136,11 @@ function New-CMOSADR {
         }
         else {
             switch ($OSName) {
+                "WS2012" {
+                    Write-Verbose "Setting Title filter to: Windows Server 2012"
+                    $adrParam.Add("Product","Windows Server 2012")
+
+                }
                 "WS2012R2" {
                     Write-Verbose "Setting Title filter to: Windows Server 2012 R2"
                     $adrParam.Add("Product","Windows Server 2012 R2")
