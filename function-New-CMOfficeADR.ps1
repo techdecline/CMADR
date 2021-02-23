@@ -24,7 +24,7 @@ function New-CMOfficeADR {
 
         # Office Version
         [Parameter(Mandatory)]
-        [ValidateSet("Office2019")]
+        [ValidateSet("Office2019","SAEC")]
         [string]
         $OfficeVersion,
 
@@ -105,7 +105,12 @@ function New-CMOfficeADR {
         switch ($OfficeVersion) {
             "Office2019" {
                 Write-Verbose "Setting Title filter to: Office 2019"
-                $adrParam.Add("Title","Office 2019%") }
+                $adrParam.Add("Title","Office 2019%")
+            }
+            "SAEC" {
+                Write-Verbose "Setting Title filter to: Semi-Annual Enterprise Channel"
+                $adrParam.Add("Title","%Semi-Annual Enterprise Channel%")
+            }
             default {
 
             }

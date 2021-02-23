@@ -29,8 +29,8 @@ function New-CMOSADR {
 
         # Windows 10 Version
         [Parameter(Mandatory,ParameterSetName="ByOSVersion")]
-        [ValidateSet("1709","1803","1809","1903","1909","2004")]
-        [int]
+        [ValidateSet("1709","1803","1809","1903","1909","2004","20H2")]
+        [string]
         $OSVersion,
 
         # OS Short Name
