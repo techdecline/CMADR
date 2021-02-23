@@ -30,7 +30,7 @@ CompanyName = 'Bright Skies GmbH'
 Copyright = '(c) Cornelius Schuchardt. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'PowerShell Module for creating and managing MEMCM / ConfigMgr / SCCM Automatic Deployment Rules'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''
